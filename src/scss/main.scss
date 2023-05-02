@@ -1,0 +1,92 @@
+@use "./layout";
+@use "./base/" as *;
+@use "./abstracts" as *;
+
+
+
+.section {
+    &--color-tan{
+        background-color: $clr-bg-primary;
+    }
+
+    &__container {
+        max-width: 110rem;
+        margin: 0 auto;
+        padding: $padding;
+        margin-top: 2rem;
+    }
+}
+
+// --------------------------
+// HERO
+// --------------------------
+
+.hero {
+    max-width: 110rem;
+    height: 50vh;
+    margin: 0 auto;
+    padding: $padding;
+    display: grid;
+    grid-template-columns: 1fr .75fr;
+    align-items: center;
+    column-gap: 6rem;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+
+    &__image {
+        width: 100%;
+    }
+}
+
+
+// --------------------------
+// RECOMMENDATIONS
+// --------------------------
+
+
+
+
+
+
+
+// --------------------------
+// FOOTER
+// --------------------------
+
+
+
+
+
+// --------------------------
+// COMPONENTS
+// --------------------------
+
+// BUTTON
+.btn {
+    background-color: $clr-primary;
+    border: none;
+    padding: 1rem 3.5rem;
+    color: $clr-txt-secondary;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: $clr-txt-primary;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    color: $clr-txt-primary;
+}
