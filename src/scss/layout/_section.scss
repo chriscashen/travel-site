@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+// --------------------------
+// SECTION
+// --------------------------
+.section {
+    &--color-tan {
+        background-color: $clr-bg-primary;
+    }
+
+    &__container {
+        max-width: 110rem;
+        margin: $margin-lg auto;
+        padding: $padding;
+    }
+
+    &__content {
+        padding: $padding;
+    }
+}

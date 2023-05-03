@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+// --------------------------
+// DESINATION CARD
+// --------------------------
+.desination__card {
+
+    display: inline-block;
+    width: 28rem;
+    min-height: 40rem;
+    border-radius: 5px;
+    background-color: aqua;
+    position: relative;
+    padding: $padding;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(5px);
+
+    &:nth-child(1) {
+        background-image: url("../assets/images/iceland.jpg");
+    }
+
+    &:nth-child(2) {
+        background-image: url("../assets/images/iceland.jpg");
+
+    }
+
+    &:nth-child(3) {
+        background-image: url("../assets/images/iceland.jpg");
+    }
+
+
+    &-title {
+        padding: $padding;
+        position: absolute;
+        color: white;
+        bottom: 0;
+        right: 0;
+
+    }
+}

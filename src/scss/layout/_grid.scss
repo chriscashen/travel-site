@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+// --------------------------
+// GRID
+// --------------------------
+.grid-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    margin: 0 auto;
+    max-width: 95rem;
+    
+    &--space-between {
+        justify-content: space-between;
+    }
+}

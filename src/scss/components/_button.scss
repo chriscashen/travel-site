@@ -1,1 +1,12 @@
-
+@use "../abstracts/" as *;
+// --------------------------
+// BUTTON
+// --------------------------
+.btn {
+    background-color: $clr-primary;
+    border: none;
+    padding: 1rem 3.5rem;
+    color: $clr-txt-secondary;
+    cursor: pointer;
+    border-radius: 25px;
+}

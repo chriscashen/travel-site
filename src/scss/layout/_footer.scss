@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+// --------------------------
+// FOOTER
+// --------------------------
+.footer {
+    background-color: $clr-bg-primary;
+    padding: $padding;
+
+    &__content {
+        padding: $padding;
+    }
+
+
+    &__column-item {
+        margin: $margin 0;
+        margin-right: $margin;
+
+        &-sub {
+            color: #DB7A4E
+        }
+
+        &-detail {
+            margin-top: $margin-sm;
+        }
+    }
+}
