@@ -1,6 +1,6 @@
-@use "./layout";
-@use "./base/" as *;
 @use "./abstracts" as *;
+@use "./base/" as *;
+@use "./layout";
 
 
 
@@ -8,12 +8,10 @@
     &--color-tan{
         background-color: $clr-bg-primary;
     }
-
     &__container {
         max-width: 110rem;
-        margin: 0 auto;
+        margin: $margin-lg auto;
         padding: $padding;
-        margin-top: 2rem;
     }
 }
 
@@ -23,7 +21,7 @@
 
 .hero {
     max-width: 110rem;
-    height: 50vh;
+    height: 60vh;
     margin: 0 auto;
     padding: $padding;
     display: grid;
@@ -50,7 +48,40 @@
 // --------------------------
 
 
+.desination__card {
+    &:nth-child(1) {
+        background-image: url("../assets/Images/hawaii.jpg");
+    }
 
+    &:nth-child(2) {
+        background-image: url("../assets/Images/iceland.jpg");
+
+    }
+
+    &:nth-child(3) {
+        background-image: url("../assets/Images/greece.jpg");
+    }
+
+        display: inline-block;
+        width: 30rem;
+        min-height: 40rem;
+        border-radius: 5px;
+        background-color: aqua;
+        position: relative;
+        padding: $padding;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(5px);
+
+        &-title{
+            padding: $padding;
+            position: absolute;
+            color: white;
+            bottom: 0;
+            right: 0;
+        
+}
+}
 
 
 
@@ -58,7 +89,9 @@
 // --------------------------
 // FOOTER
 // --------------------------
-
+    .footer {
+        background: $clr-bg-primary;
+    }
 
 
 
@@ -77,16 +110,44 @@
     border-radius: 25px;
 }
 
+
+// --------------------------
+// TYPO
+// --------------------------
+
 h1 {
     font-size: 3.5rem;
     color: $clr-txt-primary;
 }
 
 h2 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+}
+
+h3 {
     font-size: 2.2rem;
+    letter-spacing: .1rem;
 }
 
 p {
     font-size: 1.5rem;
+    color: $clr-txt-primary;
+}
+
+
+// --------------------------
+// HELPERS
+// --------------------------
+
+.grid-col-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: $padding;
+    justify-items: center;
+}
+
+
+.clr-txt-primary {
     color: $clr-txt-primary;
 }
