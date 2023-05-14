@@ -11,4 +11,12 @@
     &--space-between {
         justify-content: space-between;
     }
+
+    @include respond ("tab-port") {
+        grid-template-columns: 1;
+        justify-content: center;
+        justify-items: center;
+        gap: 2rem;
+    }
+    
 }

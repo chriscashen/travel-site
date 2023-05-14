@@ -17,36 +17,38 @@
 <body>
   <header class="header">
     <nav class="nav">
-      <a class="nav__logo">
+      <div class="nav__container">
+      <a class="nav__logo" href="./index.html">
         <h4 class="nav__logo-text clr-txt-primary">Travel Site</h4>
       </a>
       <ul class="nav__list">
         <li class="nav__list-item">
-          <a class="nav__list-item-link">Home</a>
+          <a class="nav__list-item-link nav__list-item-link--active">Home</a>
         </li>
         <li class="nav__list-item">
-          <a class="nav__list-item-link">Hawaii</a>
+          <a class="nav__list-item-link" href="./pages/hawaii.html">Hawaii</a>
         </li>
         <li class="nav__list-item">
-          <a class="nav__list-item-link">Iceland</a>
+          <a class="nav__list-item-link" href="./pages/iceland.html">Iceland</a>
         </li>
         <li class="nav__list-item">
           <a class="nav__list-item-link" href="./pages/greese.html">Greece</a>
         </li>
       </ul>
+    </div>
     </nav>
   </header>
   <section class="section section--color-tan">
-    <div class="hero">
+    <div class="hero hero--mobile">
       <div class="hero__left">
         <h2 class="hero__left-header">
           Travelling Comes With<br />Endless Discoveries
         </h2>
-        <p>
+        <p class="hero__left-sub">
           Don't let your dreams just be dreams. Experience the world by booking a vacation with us now.
         </p>
         
-        <button class="btn">Get started</button>
+        <button class="btn hero--btn">Get started</button>
       </div>
       <img class="hero__image" src="./assets/images/hero.png" />
     </div>

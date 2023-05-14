@@ -1,0 +1,43 @@
+@use "../abstracts/" as *;
+// --------------------------
+// DESTINATION PAGE
+// --------------------------
+
+.destination {
+    height: 100vh;
+    width: 100vw;
+
+    &__cover {
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+
+        &--greese {
+            background-image: url("../../src/assets/images/greece.jpg");
+        }
+        &--iceland {
+            background-image: url("../../src/assets/images/iceland.jpg");
+        }
+        &--hawaii {
+            background-image: url("../../src/assets/images/hawaii.jpg");
+        }
+    }
+
+    &__container {
+        max-width: 110rem;
+        margin: 0 auto;
+        margin-top: 6.2rem;
+        padding: $padding;
+
+        &-header {
+            margin-top: $margin-lg;
+            color: $clr-txt-secondary;
+        }
+
+        &-body {
+            padding: $padding;
+            margin-top: $margin;
+        }
+    }
+}

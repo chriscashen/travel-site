@@ -1,0 +1,93 @@
+//MEDIA QUERY MANAGER
+/*
+0 - 600 phone
+600-900 tablet
+900-1200 tablet landscape
+1200-1800 desktop // normal style
+*/
+$phone: 600px;
+$tab-port: 900px;
+$tab-land: 1200px;
+$large-desktop: 1800px;
+
+// convert to EM in media query not effected by root font size 
+// 1 REM = 16px default
+// 600 / 15 = 37.5em
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint ==phone {
+        @media (max-width: 600px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint ==tab-port {
+        @media (max-width: 950px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint ==tab-land {
+        @media (max-width: 1200px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint ==large-desktop {
+        @media (min-width: 1800px) {
+            @content
+        }
+
+        ;
+    }
+}
+// ---------------------------
+// BREAKPOINT MAP AND MIXIN DEV ONLY
+// ---------------------------
+
+// $breakpoints: (
+//     "phone": 600px,
+//     "tab-port": 720px,
+//     "tab-land": 1200px,
+// );
+
+
+
+// @mixin breakpoint($name) {
+//     @if not map-has-key($breakpoints, $name ) {
+//         @warn "Warning `#{$name}` is not a valid breakpoint"
+//     }
+
+//     @else {
+//         @media (min-width: map-get($breakpoint, $name)) {
+//             @content
+//         }
+//     }
+// }
+
+// ;
+
+
+// html {
+//     font-size: 62.5%; //1rem = 10px
+
+//     @include respond-phone { // width < 600px
+//         font-size: 56.25%; // 1 rem = 9px 9/16
+//     }
+
+//     @include respond(tab-port) { // width < 600
+//         font-size: 50%; // 1 rem = 8px  8/16
+//     }
+
+//     @include respond(phone) { // width < 500
+//         font-size: 43.75%; //1 rem = 7px  7/16 
+//     }
+
+// }

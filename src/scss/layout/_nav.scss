@@ -1,13 +1,23 @@
 @use "../abstracts" as *;
 
+
+
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5.5rem;
-    max-width: 110rem;
-    padding: $padding;
-    margin: 0 auto;
+
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top:0;
+    z-index: 100;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 120rem;
+        padding: $padding; 
+        margin: 0 auto;
+    }
 
     &__list{
         display: flex;
@@ -16,5 +26,10 @@
             padding: 1rem;
             font-size: 1.3rem;
         }
+
+        &-item-link--active {
+            border-bottom: solid 2px $clr-primary;
+        }
+
     }
 }
