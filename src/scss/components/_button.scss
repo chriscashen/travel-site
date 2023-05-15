@@ -9,4 +9,12 @@
     color: $clr-txt-secondary;
     cursor: pointer;
     border-radius: 25px;
+
+
+    &--close {
+        padding: .5rem;
+        border: none;
+        color: rgba(255, 255, 255, 0.85);
+        background-color: transparent;
+    }
 }

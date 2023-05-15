@@ -10,36 +10,74 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="scss/main.scss" />
-  <script defer src="./js/index.js"></script>
+  <script type="module" src="./js/index.js"></script>
   <title>Travel Site</title>
 </head>
 
 <body>
+  <!-- DESTINATION MODAL -->
+  <dialog class="modal" data-modal>
+    <div class="modal__container">
+      <div class="modal__header">
+        <h2 class="modal__header-text">Find Your Paradise</h2>
+        <button class="btn--close" type="button"  formmethod="dialog" data-close-modal>X</button>
+      </div>
+
+
+      <form id="destination-form">
+        <div class="modal__form-container">
+          <div class="modal__input">
+            <label class="modal__input-label" for="destination">Search</label>
+            <input id="destination" type="text" name="desination" />
+          </div>
+          <div class="modal__input">
+            <label class="modal__input-label" for="depart">Depart</label>
+            <input id="depart" type="date" name="depart" />
+          </div>
+          <div class="modal__input">
+            <label class="modal__input-label" for="eturn">Return</label>
+            <input id="return" type="date" name="return" />
+          </div>
+          <div class="modal__input">
+            <label class="modal__input-label" for="range">Price Range</label>
+            <select name="range" id="range" >
+              <option value="option-1">$500-$800</option>
+              <option value="option-2">$1000-$2000</option>
+              <option value="option-3">$3000-$5000</option>
+            </select>
+          </div>
+          <button class="btn" type="submit" data-close-modal>Search</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+  <!-- HEADER -->
   <header class="header">
+
     <nav class="nav">
       <div class="nav__container">
-      <a class="nav__logo" href="./index.html">
-        <h4 class="nav__logo-text clr-txt-primary">Travel Site</h4>
-      </a>
-      <ul class="nav__list">
-        <li class="nav__list-item">
-          <a class="nav__list-item-link nav__list-item-link--active">Home</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link" href="./pages/hawaii.html">Hawaii</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link" href="./pages/iceland.html">Iceland</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="nav__list-item-link" href="./pages/greese.html">Greece</a>
-        </li>
-      </ul>
-    </div>
+        <a class="nav__logo" href="./index.html">
+          <h4 class="nav__logo-text clr-txt-primary">Travel Site</h4>
+        </a>
+        <ul class="nav__list">
+          <li class="nav__list-item">
+            <a class="nav__list-item-link nav__list-item-link--active">Home</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="./pages/hawaii.html">Hawaii</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="./pages/iceland.html">Iceland</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-item-link" href="./pages/greese.html">Greece</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <section class="section section--color-tan">
-    <div class="hero hero--mobile">
+    <div class="hero">
       <div class="hero__left">
         <h2 class="hero__left-header">
           Travelling Comes With<br />Endless Discoveries
@@ -47,8 +85,8 @@
         <p class="hero__left-sub">
           Don't let your dreams just be dreams. Experience the world by booking a vacation with us now.
         </p>
-        
-        <button class="btn hero--btn">Get started</button>
+
+        <button class="btn hero--btn" data-open-modal="">Get started</button>
       </div>
       <img class="hero__image" src="./assets/images/hero.png" />
     </div>
@@ -78,35 +116,37 @@
         <h3 class="footer__column-header">Contact</h3>
         <div class="footer__column-item">
           <p class="footer__column-item-sub">Email</p>
-          <a class="footer__column-item-link" href="mailto:info@travelsite.com" class="footer__column-item-detail"><p class="footer__column-item-detail">info@travelsite.com</a>
+          <a class="footer__column-item-link" href="mailto:info@travelsite.com" class="footer__column-item-detail">
+            <p class="footer__column-item-detail">info@travelsite.com
+          </a>
         </div>
       </div>
       <div class="footer__column">
         <h3 class="footer__column-header">Hours</h3>
         <div class="grid-col-3">
-        <div class="footer__column-item">
-          <p class="footer__column-item-sub">Monday - Friday</p>
-          <p class="footer__column-item-detail">9:00 AM - 5:00 PM</p>
+          <div class="footer__column-item">
+            <p class="footer__column-item-sub">Monday - Friday</p>
+            <p class="footer__column-item-detail">9:00 AM - 5:00 PM</p>
+          </div>
+          <div class="footer__column-item">
+            <p class="footer__column-item-sub">Saturday</p>
+            <p class="footer__column-item-detail">10:00 AM - 4:00 PM</p>
+          </div>
+          <div class="footer__column-item">
+            <p class="footer__column-item-sub">Sunday</p>
+            <p class="footer__column-item-detail">Closed</p>
+          </div>
         </div>
-        <div class="footer__column-item">
-          <p class="footer__column-item-sub">Saturday</p>
-          <p class="footer__column-item-detail">10:00 AM - 4:00 PM</p>
-        </div>
-        <div class="footer__column-item">
-          <p class="footer__column-item-sub">Sunday</p>
-          <p class="footer__column-item-detail">Closed</p>
-        </div>
-      </div>
       </div>
       <div class="footer__column">
         <h3 class="footer__column-header">Social</h3>
         <div class="footer__column-item">
-          <a class="footer__column-social-link" href="mailto:info@travelsite.com"
-            class="footer__column-detail"><img class="icon" src="./assets/icons/icon-instagram.png" /></a>
-          <a class="footer__column-social-link" href="mailto:info@travelsite.com"
-            class="footer__column-detail"><img class="icon" src="./assets/icons/icon-facebook.png" /></a>
-          <a class="footer__column-social-link" href="mailto:info@travelsite.com"
-            class="footer__column-detail"><img class="icon" src="./assets/icons/icon-twitter.png" /></a>
+          <a class="footer__column-social-link" href="mailto:info@travelsite.com" class="footer__column-detail"><img
+              class="icon" src="./assets/icons/icon-instagram.png" /></a>
+          <a class="footer__column-social-link" href="mailto:info@travelsite.com" class="footer__column-detail"><img
+              class="icon" src="./assets/icons/icon-facebook.png" /></a>
+          <a class="footer__column-social-link" href="mailto:info@travelsite.com" class="footer__column-detail"><img
+              class="icon" src="./assets/icons/icon-twitter.png" /></a>
         </div>
       </div>
     </div>
